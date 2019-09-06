@@ -7,8 +7,8 @@
   }
   .main-content {
     display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
   .container {
     max-width: 1200px;
@@ -16,7 +16,13 @@
   }
 
   img {
-    max-width: 100%;
+	max-width: 100%;
+	display: block;
+  }
+  @media (min-width: 480px) {
+    .entry {
+      flex: 0 0 calc(50% - 1rem);
+    }
   }
   @media (min-width: 768px) {
     .entry {
