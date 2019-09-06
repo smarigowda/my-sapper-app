@@ -1,16 +1,27 @@
 <style>
-  h1, h2 {
+  h1,
+  h2 {
     text-transform: uppercase;
     text-align: center;
     font-size: 3rem;
   }
   .main-content {
     display: flex;
-    flex-wrap: wrap;
+	flex-wrap: wrap;
+	justify-content: space-between;
   }
   .container {
     max-width: 1200px;
     margin: 0 auto;
+  }
+
+  img {
+    max-width: 100%;
+  }
+  @media (min-width: 768px) {
+    .entry {
+      flex: 0 0 calc(33.3% - 1rem);
+    }
   }
 </style>
 
@@ -29,7 +40,6 @@
   <link rel="stylesheet" href="css/styles.css" />
 </svelte:head>
 
-<head />
 <div class="container">
   <h2>Latest Entries</h2>
   <main class="main-content">
