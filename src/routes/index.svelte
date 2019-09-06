@@ -1,46 +1,124 @@
 <style>
-	h1, figure, p {
-		text-align: center;
-		margin: 0 auto;
-	}
-
-	h1 {
-		font-size: 2.8em;
-		text-transform: uppercase;
-		font-weight: 700;
-		margin: 0 0 0.5em 0;
-	}
-
-	figure {
-		margin: 0 0 1em 0;
-	}
-
-	img {
-		width: 100%;
-		max-width: 400px;
-		margin: 0 0 1em 0;
-	}
-
-	p {
-		margin: 1em auto;
-	}
-
-	@media (min-width: 480px) {
-		h1 {
-			font-size: 4em;
-		}
-	}
+  h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 3rem;
+  }
 </style>
 
 <svelte:head>
-	<title>title: Sapper project template</title>
+  <title>title: Sapper project template</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Cards Flexbox</title>
+  <link
+    rel="stylesheet"
+    href="https://necolas.github.io/normalize.css/8.0.0/normalize.css" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
 </svelte:head>
 
 <h1>Great success!</h1>
 
-<figure>
-	<img alt='Borat' src='great-success.png'>
-	<figcaption>HIGH FIVE!</figcaption>
-</figure>
-
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
+<head />
+<body>
+  <div class="container">
+    <h2>Latest Entries</h2>
+    <main class="main-content">
+      <article class="entry">
+        <img src="img/01.jpg" alt="entry image" />
+        <div class="content">
+          <h3>Tips for Saving Money in your Next Travel</h3>
+          <p>
+            Published on:
+            <span>July 19th, 2019</span>
+          </p>
+          <p>
+            By:
+            <span>The Travel Blog</span>
+          </p>
+          <a href="#" class="button">Read More</a>
+        </div>
+      </article>
+      <article class="entry">
+        <img src="img/02.jpg" alt="entry image" />
+        <div class="content">
+          <h3>The Complete Guide for Traveling</h3>
+          <p>
+            Published on:
+            <span>July 19th, 2019</span>
+          </p>
+          <p>
+            By:
+            <span>The Travel Blog</span>
+          </p>
+          <a href="#" class="button">Read More</a>
+        </div>
+      </article>
+      <article class="entry">
+        <img src="img/03.jpg" alt="entry image" />
+        <div class="content">
+          <h3>Ultimate Guide to Take the best Pictures</h3>
+          <p>
+            Published on:
+            <span>July 19th, 2019</span>
+          </p>
+          <p>
+            By:
+            <span>The Travel Blog</span>
+          </p>
+          <a href="#" class="button">Read More</a>
+        </div>
+      </article>
+      <article class="entry">
+        <img src="img/04.jpg" alt="entry image" />
+        <div class="content">
+          <h3>Checklist for your next Travel</h3>
+          <p>
+            Published on:
+            <span>July 19th, 2019</span>
+          </p>
+          <p>
+            By:
+            <span>The Travel Blog</span>
+          </p>
+          <a href="#" class="button">Read More</a>
+        </div>
+      </article>
+      <article class="entry">
+        <img src="img/05.jpg" alt="entry image" />
+        <div class="content">
+          <h3>Best Places to visit next Autumn</h3>
+          <p>
+            Published on:
+            <span>July 19th, 2019</span>
+          </p>
+          <p>
+            By:
+            <span>The Travel Blog</span>
+          </p>
+          <a href="#" class="button">Read More</a>
+        </div>
+      </article>
+      <article class="entry">
+        <img src="img/06.jpg" alt="entry image" />
+        <div class="content">
+          <h3>Best Places to Visit with Mountains</h3>
+          <p>
+            Published on:
+            <span>July 19th, 2019</span>
+          </p>
+          <p>
+            By:
+            <span>The Travel Blog</span>
+          </p>
+          <a href="#" class="button">Read More</a>
+        </div>
+      </article>
+    </main>
+  </div>
+  <!--.content-->
+</body>
