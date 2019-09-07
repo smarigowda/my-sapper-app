@@ -1,7 +1,6 @@
 <script>
   import Button from "../components/Button.svelte";
-  export let articles;
-  console.log(articles);
+  export let article;
 </script>
 
 <style>
@@ -34,20 +33,18 @@
   }
 </style>
 
-{#each articles as article}
-  <article class="entry">
-    <img src={article.imageSource} alt="entry image" />
-    <div class="content">
-      <h3>{article.contentHeading}</h3>
-      <p>
-        Published on:
-        <span>{article.publishedOn}</span>
-      </p>
-      <p>
-        By:
-        <span>{article.publishedBy}</span>
-      </p>
-      <Button />
-    </div>
-  </article>
-{/each}
+<article class="entry">
+  <img src={article.imageSource} alt="entry image" />
+  <div class="content">
+    <h3>{article.contentHeading}</h3>
+    <p>
+      Published on:
+      <span>{article.publishedOn}</span>
+    </p>
+    <p>
+      By:
+      <span>{article.publishedBy}</span>
+    </p>
+    <Button />
+  </div>
+</article>

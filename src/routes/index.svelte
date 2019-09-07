@@ -12,10 +12,8 @@
 
 <script>
   export let articles;
-  console.log("--- Articles ---");
-  console.log(articles);
   import Button from "../components/Button.svelte";
-  import Articles from "../components/Articles.svelte";
+  import Articles from "../containers/Articles.svelte";
 </script>
 
 <style>
@@ -47,7 +45,6 @@
   <link
     href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700"
     rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
 </svelte:head>
 
 <div class="container">
