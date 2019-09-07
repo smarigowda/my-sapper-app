@@ -1,9 +1,33 @@
+<script context="module">
+  export function preload({ params, query }) {
+    // index.json ==> index.json.js
+    return this.fetch(`index.json`)
+      .then(r => r.json())
+      .then(articles => {
+		  console.log(articles);
+        return { articles };
+      });
+  }
+</script>
+
+<script>
+  export let articles;
+  console.log('--- Articles ---');
+  console.log(articles);
+  import Button from "../components/Button.svelte";
+  import Article from "../components/Article.svelte";
+</script>
+
 <style>
-  h1,
   h2 {
     text-transform: uppercase;
     text-align: center;
     font-size: 3rem;
+  }
+  h3 {
+    margin: 0;
+    font-weight: 700;
+    font-family: "Libre Baskerville", serif;
   }
   .main-content {
     display: flex;
@@ -14,10 +38,17 @@
     max-width: 1200px;
     margin: 0 auto;
   }
-
   img {
-	max-width: 100%;
-	display: block;
+    max-width: 100%;
+    display: block;
+  }
+  .entry .content {
+    padding: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .content span {
+    color: #db008d;
   }
   @media (min-width: 480px) {
     .entry {
@@ -49,6 +80,7 @@
 <div class="container">
   <h2>Latest Entries</h2>
   <main class="main-content">
+	<Article />
     <article class="entry">
       <img src="img/01.jpg" alt="entry image" />
       <div class="content">
@@ -61,7 +93,7 @@
           By:
           <span>The Travel Blog</span>
         </p>
-        <a href="#" class="button">Read More</a>
+        <Button />
       </div>
     </article>
     <article class="entry">
@@ -76,7 +108,7 @@
           By:
           <span>The Travel Blog</span>
         </p>
-        <a href="#" class="button">Read More</a>
+        <Button />
       </div>
     </article>
     <article class="entry">
@@ -91,7 +123,7 @@
           By:
           <span>The Travel Blog</span>
         </p>
-        <a href="#" class="button">Read More</a>
+        <Button />
       </div>
     </article>
     <article class="entry">
@@ -106,7 +138,7 @@
           By:
           <span>The Travel Blog</span>
         </p>
-        <a href="#" class="button">Read More</a>
+        <Button />
       </div>
     </article>
     <article class="entry">
@@ -121,7 +153,7 @@
           By:
           <span>The Travel Blog</span>
         </p>
-        <a href="#" class="button">Read More</a>
+        <Button />
       </div>
     </article>
     <article class="entry">
@@ -136,7 +168,7 @@
           By:
           <span>The Travel Blog</span>
         </p>
-        <a href="#" class="button">Read More</a>
+        <Button />
       </div>
     </article>
   </main>
