@@ -4,7 +4,7 @@
     return this.fetch(`index.json`)
       .then(r => r.json())
       .then(articles => {
-		  console.log(articles);
+        console.log(articles);
         return { articles };
       });
   }
@@ -12,10 +12,10 @@
 
 <script>
   export let articles;
-  console.log('--- Articles ---');
+  console.log("--- Articles ---");
   console.log(articles);
   import Button from "../components/Button.svelte";
-  import Article from "../components/Article.svelte";
+  import Articles from "../components/Articles.svelte";
 </script>
 
 <style>
@@ -23,11 +23,6 @@
     text-transform: uppercase;
     text-align: center;
     font-size: 3rem;
-  }
-  h3 {
-    margin: 0;
-    font-weight: 700;
-    font-family: "Libre Baskerville", serif;
   }
   .main-content {
     display: flex;
@@ -37,28 +32,6 @@
   .container {
     max-width: 1200px;
     margin: 0 auto;
-  }
-  img {
-    max-width: 100%;
-    display: block;
-  }
-  .entry .content {
-    padding: 1rem;
-    text-align: center;
-    text-transform: uppercase;
-  }
-  .content span {
-    color: #db008d;
-  }
-  @media (min-width: 480px) {
-    .entry {
-      flex: 0 0 calc(50% - 1rem);
-    }
-  }
-  @media (min-width: 768px) {
-    .entry {
-      flex: 0 0 calc(33.3% - 1rem);
-    }
   }
 </style>
 
@@ -80,97 +53,7 @@
 <div class="container">
   <h2>Latest Entries</h2>
   <main class="main-content">
-	<Article />
-    <article class="entry">
-      <img src="img/01.jpg" alt="entry image" />
-      <div class="content">
-        <h3>Tips for Saving Money in your Next Travel</h3>
-        <p>
-          Published on:
-          <span>July 19th, 2019</span>
-        </p>
-        <p>
-          By:
-          <span>The Travel Blog</span>
-        </p>
-        <Button />
-      </div>
-    </article>
-    <article class="entry">
-      <img src="img/02.jpg" alt="entry image" />
-      <div class="content">
-        <h3>The Complete Guide for Traveling</h3>
-        <p>
-          Published on:
-          <span>July 19th, 2019</span>
-        </p>
-        <p>
-          By:
-          <span>The Travel Blog</span>
-        </p>
-        <Button />
-      </div>
-    </article>
-    <article class="entry">
-      <img src="img/03.jpg" alt="entry image" />
-      <div class="content">
-        <h3>Ultimate Guide to Take the best Pictures</h3>
-        <p>
-          Published on:
-          <span>July 19th, 2019</span>
-        </p>
-        <p>
-          By:
-          <span>The Travel Blog</span>
-        </p>
-        <Button />
-      </div>
-    </article>
-    <article class="entry">
-      <img src="img/04.jpg" alt="entry image" />
-      <div class="content">
-        <h3>Checklist for your next Travel</h3>
-        <p>
-          Published on:
-          <span>July 19th, 2019</span>
-        </p>
-        <p>
-          By:
-          <span>The Travel Blog</span>
-        </p>
-        <Button />
-      </div>
-    </article>
-    <article class="entry">
-      <img src="img/05.jpg" alt="entry image" />
-      <div class="content">
-        <h3>Best Places to visit next Autumn</h3>
-        <p>
-          Published on:
-          <span>July 19th, 2019</span>
-        </p>
-        <p>
-          By:
-          <span>The Travel Blog</span>
-        </p>
-        <Button />
-      </div>
-    </article>
-    <article class="entry">
-      <img src="img/06.jpg" alt="entry image" />
-      <div class="content">
-        <h3>Best Places to Visit with Mountains</h3>
-        <p>
-          Published on:
-          <span>July 19th, 2019</span>
-        </p>
-        <p>
-          By:
-          <span>The Travel Blog</span>
-        </p>
-        <Button />
-      </div>
-    </article>
+    <Articles {articles} />
   </main>
 </div>
 <!--.content-->
